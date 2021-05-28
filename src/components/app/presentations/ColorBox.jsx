@@ -4,8 +4,8 @@ import PropTypes from 'prop-types';
 const ColorBox = ({ color }) => { 
 	return (
 		<div>
-			<div style={{ width: '450px', height: '450px', backgroundColor:color }}>
-				Hello!
+			<div style={{ width: '450px', height: '450px', backgroundColor:color}}>
+			
 			</div>
 		</div>
 	);
