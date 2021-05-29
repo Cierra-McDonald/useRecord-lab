@@ -2,18 +2,18 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const ColorBox = ({ color }) => { 
-	return (
-		<div>
-			<div style={{ width: '450px', height: '450px', backgroundColor:color}}>
+  return (
+    <div>
+      <div style={{ width: '450px', height: '450px', backgroundColor:color }}>
 			
-			</div>
-		</div>
-	);
+      </div>
+    </div>
+  );
 
 };
 
 ColorBox.propTypes = { 
-	color: PropTypes.string.isRequired
+  color: PropTypes.array.isRequired
 };
 
 export default ColorBox;

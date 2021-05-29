@@ -1,37 +1,51 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import ColorBox from '../presentations/ColorBox';
+import useRecords from '../hooks/useRecords';
 const randomColor = require('randomcolor');
 
 const MainPageContainer = () => { 
-    const [color, setColor] = useState('#6CC551');
-
-     const generateRandomColor = () => { 
-        const color = randomColor();
-        return color;
-    };
-
-
-    useEffect(() => { 
-        setColor(generateRandomColor());
-    }, []);
-
-    const changeNewColor = () => { 
+  const [color, setColor, colorHistory] = useRecords([]);
+  
+  useEffect(() => { 
+    setColor(generateRandomColor());
+  }, []);
     
-        console.log('in the button');
-        setColor(generateRandomColor);
-    };
+  const generateRandomColor = () => { 
+    const color = randomColor();
+    return color;
+  };
+    
+  const changeNewColor = () => { 
+    setColor(generateRandomColor());
+  };
+
+ 
 
   return (
     <div>
-      <h2>MainPage!</h2>
       <ColorBox color={color}/>
       <br/>
       <br/>
-      <button>Undo</button>
-      <button>Redo</button>
+      <button onClick={e => {
+        e.preventDefault();
+        colorHistory.undo();
+      }}
+      disabled={!colorHistory.hasUndo}
+      >UNDO
+      </button>
+
+      <button onClick={ e => { 
+        e.preventDefault();
+        colorHistory.redo();
+      }}
+      disabled={!colorHistory.hasRedo}
+      >REDO
+      </button>
+
       <br/>
       <br/>
       <button onClick={() => changeNewColor()}>New Color</button>
+      <p>Current Hex: {color}</p>
     </div>
   );
 };
