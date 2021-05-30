@@ -1,0 +1,39 @@
+body { 
+    background-color: palegreen;
+}
+
+.hexdiv { 
+    background-color: whitesmoke;
+    border: black 2px double;
+    height: 5rem;
+    width: 10rem;
+    text-align: center;
+    padding: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0 auto;
+}
+
+.controls { 
+    background-color: palevioletred;
+    border-radius: .5em;
+    height: 2.5rem;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    
+
+}
+
+.buttonDiv { 
+    width: fit-content;
+    height: 5rem;
+    margin: auto;
+    padding-top: 20px;
+}
+
+.colorBoxDiv { 
+    background-color: white;
+    width: fit-content;
+    height: fit-content;
+    margin: 0 auto;
+}

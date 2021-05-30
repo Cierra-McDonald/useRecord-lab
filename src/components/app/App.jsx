@@ -1,8 +1,11 @@
 import React from 'react';
-import MainPageContainer from '../app/containers/MainPageContainter';
+import MainPageContainer from './containers/MainPageContainer';
 
 export default function App() {
   return (
-    <MainPageContainer/>
+    <div>
+      <h1 style={{textAlign: 'center'}}>Color Changer</h1>
+      <MainPageContainer/>
+    </div>
   ); 
 }
