@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styles from './ColorBox.css';
 
 const ColorBox = ({ color }) => { 
@@ -12,8 +13,8 @@ const ColorBox = ({ color }) => {
 
 };
 
-// ColorBox.propTypes = { 
-//   color: PropTypes.array.isRequired
-// };
+ColorBox.propTypes = { 
+  color: PropTypes.array.isRequired
+};
 
 export default ColorBox;
