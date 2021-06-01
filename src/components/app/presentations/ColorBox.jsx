@@ -1,21 +1,19 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import styles from './ColorBox.css';
 
 const ColorBox = ({ color }) => { 
   return (
     <div>
-      <div style={{ width: '450px', height: '450px', backgroundColor:color }}
-	  	className={styles.colorBox}>
-			
-      </div>
+      <figure style={{ width: '450px', height: '450px', backgroundColor:color }}
+        className={styles.colorBox} aria-label="color-box">	
+      </figure>
     </div>
   );
 
 };
 
-ColorBox.propTypes = { 
-  color: PropTypes.array.isRequired
-};
+// ColorBox.propTypes = { 
+//   color: PropTypes.array.isRequired
+// };
 
 export default ColorBox;
